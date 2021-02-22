@@ -13,11 +13,12 @@ export default class App extends Component {
   }
 
   fetchClothes = async () => {
-    const data = await request.get(`https://yalla-habibi.herokuapp.com/clothes`);
+    const data = await request.get(`https://yalla-habibi.herokuapp.com/clothes
+    `);
 
     this.setState({
       clothesInventory: data.body.results
-    })
+    });
   }
   render() {
     return (
@@ -37,15 +38,15 @@ export default class App extends Component {
         </header>
         <main className='shop'>
           {
-            this.state.clothesInventory.map(clothing =>
+            this.state.clothesInventory.map(item =>
               <div className='item-description'>
-                <div className='item-img'>
+                {/* <div className='item-img'>
                   <img alt='clothing-item' src={clothing.img_url} />
-                </div>
-                <p>{clothing.name}</p>
-                <p>{clothing.description}</p>
-                <p>{clothing.size}</p>
-                <p>{clothing.price}</p>
+                </div> */}
+                <p>{item.name}</p>
+                <p>{item.description}</p>
+                <p>{item.size}</p>
+                <p>{item.price}</p>
               </div>
             )
           }
