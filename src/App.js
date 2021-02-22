@@ -5,7 +5,7 @@ import './App.css';
 
 export default class App extends Component {
   state = {
-    clothesInventory: []
+    clothes: []
   }
 
   componentDidMount = async () => {
@@ -17,7 +17,7 @@ export default class App extends Component {
     `);
 
     this.setState({
-      clothesInventory: data.body.results
+      clothes: data.body.results
     });
   }
   render() {
@@ -27,22 +27,16 @@ export default class App extends Component {
           <img src={rainbow} className="App-logo" alt="logo" />
           <h1>YALLA HABIBI</h1>
           <h3>a shop for all things with a past life & a good story.</h3>
-          {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+
         </header>
         <main className='shop'>
           {
-            this.state.clothesInventory.map(item =>
+            this.state.clothes.map(item =>
               <div className='item-description'>
                 {/* <div className='item-img'>
                   <img alt='clothing-item' src={clothing.img_url} />
                 </div> */}
+                <p>{item.id}</p>
                 <p>{item.name}</p>
                 <p>{item.description}</p>
                 <p>{item.size}</p>
