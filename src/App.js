@@ -5,7 +5,8 @@ import './App.css';
 
 export default class App extends Component {
   state = {
-    clothes: []
+    clothes: [],
+    query: ''
   }
 
   componentDidMount = async () => {
@@ -17,10 +18,14 @@ export default class App extends Component {
     `);
 
     this.setState({
-      clothes: data.body.results
+      clothes: data.body
     });
   }
   render() {
+    const {
+      clothes
+    } = this.state;
+
     return (
       <div className="App" >
         <header className="App-header">
