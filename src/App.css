@@ -7,7 +7,7 @@ label {
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -19,13 +19,22 @@ label {
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 5vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.nav-links-right img {
+  height: 50px;
+  width: 50px;
+}
+.nav-links-left img {
+  height: 120px;
+  width: 120px;
 }
 
 .App-link {

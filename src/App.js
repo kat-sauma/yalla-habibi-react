@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import request from 'superagent';
-import rainbow from './rainbow-cloud.png';
+import Header from './Header.js';
+import Home from './Home.js';
 import './App.css';
 
 export default class App extends Component {
@@ -28,12 +29,8 @@ export default class App extends Component {
 
     return (
       <div className="App" >
-        <header className="App-header">
-          <img src={rainbow} className="App-logo" alt="logo" />
-          <h1>YALLA HABIBI</h1>
-          <h3>a shop for all things with a past life & a good story.</h3>
-
-        </header>
+        <Header />
+        <Home />
         <main className='shop'>
           {
             this.state.clothes.map(item =>
