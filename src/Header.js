@@ -6,8 +6,9 @@ export default class Header extends Component {
         return (
             <header className="App-header">
                 <div className='nav-links-left'>
-                    <NavLink activeClassName='nav-link-group' to="/">
+                    <NavLink exact activeClassName='nav-link-group' to="/">
                         <img className='rainbow-icon' alt='rainbow-icon-to-home-page' src='./assets/icons/rainbow.png' />
+                        Home
                     </NavLink>
                 </div>
                 <div className='header-title'>
@@ -16,11 +17,13 @@ export default class Header extends Component {
                     </h3>
                 </div>
                 <div className='nav-links-right'>
-                    <NavLink activeClassName='nav-link-group' to="/create">
-                        <img className='sun-icon' alt='sun-icon-to-inventory-list' src='./assets/icons/cloud-sun.png' />
+                    <NavLink exact activeClassName='nav-link-group' to="/create">
+                        <img className='sun-icon' alt='sun-icon-to-create-page' src='./assets/icons/cloud-sun.png' />
+                        Create
                     </NavLink>
-                    <NavLink activeClassName='nav-link-group' to="/list">
-                        <img className='moon-icon' alt='moon-icon-to-detail-page' src='./assets/icons/cloud-moon.png' />
+                    <NavLink exact activeClassName='nav-link-group' to="/clothes">
+                        <img className='moon-icon' alt='moon-icon-to-inventory-page' src='./assets/icons/cloud-moon.png' />
+                        List
                     </NavLink>
 
 

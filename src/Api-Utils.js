@@ -37,4 +37,4 @@ export async function updateItem(id, itemOfClothing) {
     return body;
 }
 
-export const getCategoryId = (candy, categories) => categories.find(category => candy.category === category.name).id;
+export const getCategoryId = (item, categories) => categories.find(category => item.category === category.name).id;

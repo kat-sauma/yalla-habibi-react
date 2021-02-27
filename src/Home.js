@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+
 
 
 export default class Home extends Component {
@@ -10,14 +12,11 @@ export default class Home extends Component {
 
                     <h1>YALLA HABIBI</h1>
                     <h3>a shop for all things with a past life & a good story.</h3>
-                    <a
-                        className="App-link"
-                        href="https://yalla-habibi.herokuapp.com/clothes"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        get to know the old souls here.
-                    </a>
+                    <Link className='link-inventory-page' to="/clothes">
+                        <h4>
+                            get to know the old souls here.
+                        </h4>
+                    </Link>
                 </main>
             </div>
         )

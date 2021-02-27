@@ -10,8 +10,13 @@ export default class List extends Component {
     ComponentDidMount = async () => {
         const clothes = await getClothingItems();
 
-        this.setState({ clothes: clothes })
+        console.log('|| clothes', clothes);
+
+        this.setState({
+            clothes: clothes
+        })
     }
+
     render() {
         return (
             <div>
@@ -26,6 +31,7 @@ export default class List extends Component {
                 </div>
                 )}
             </div>
+
         )
     }
 }
