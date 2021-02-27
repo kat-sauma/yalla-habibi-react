@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import rainbow from './assets/rainbow-cloud.png';
-
 
 export default class Header extends Component {
     render() {

@@ -10,14 +10,14 @@ export default class Home extends Component {
 
                     <h1>YALLA HABIBI</h1>
                     <h3>a shop for all things with a past life & a good story.</h3>
-                    {/* <a
+                    <a
                         className="App-link"
-                        href="https://reactjs.org"
+                        href="https://yalla-habibi.herokuapp.com/clothes"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                    Learn React
-                    </a> */}
+                        get to know the old souls here.
+                    </a>
                 </main>
             </div>
         )
