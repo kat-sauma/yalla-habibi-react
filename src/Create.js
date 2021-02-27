@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Create extends Component {
     render() {
         return (
             <div>
-                {/* <Link to="/">Home</Link>
-                <Link to="/create">Create</Link>
-                <Link to="/list">List</Link> */}
+
                 <form>
                     <label>
                         <input />
