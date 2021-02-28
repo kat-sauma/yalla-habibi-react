@@ -4,12 +4,13 @@ import { updateItem, getCategories, getClothingItem, getCategoryId } from './Api
 
 export default class Detail extends Component {
     state = {
-        name: '',
-        description: '',
-        size: '',
-        price: 1,
-        // category: false,
-        category: 1
+        clothing_id: 1,
+        name: ' ',
+        img_url: ' ',
+        description: ' ',
+        category_id: 1,
+        size: ' ',
+        price: 1
     }
 
     componentDidMount = async () => {
