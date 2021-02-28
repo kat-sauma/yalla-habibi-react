@@ -2,9 +2,9 @@ import request from 'superagent';
 
 const URL = 'https://yalla-habibi.herokuapp.com';
 export async function getClothingItems() {
-    const response = await request.get(`${URL}/clothes`);
+    const { body } = await request.get(`${URL}/clothes`);
 
-    return response.body;
+    return body;
 }
 export async function getCategories() {
     const { body } = await request.get(`${URL}/categories`);
@@ -12,7 +12,7 @@ export async function getCategories() {
     return body;
 }
 export async function getClothingItem(id) {
-    const { body } = await request.get(`{URL}/clothes/${id}`);
+    const { body } = await request.get(`${URL}/clothes/${id}`);
 
     return body;
 }
@@ -25,7 +25,7 @@ export async function makeClothingItem(itemOfClothing) {
 }
 export async function deleteItem(id) {
     const { body } = await request
-        .delete(`{URL}/clothes/${id}`);
+        .delete(`${URL}/clothes/${id}`);
 
     return body;
 }

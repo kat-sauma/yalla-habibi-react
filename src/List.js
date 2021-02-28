@@ -7,28 +7,31 @@ export default class List extends Component {
         clothes: []
     }
 
-    ComponentDidMount = async () => {
-        const clothes = await getClothingItems();
+    componentDidMount = async () => {
+        const clothesData = await getClothingItems();
 
-        console.log('|| clothes', clothes);
-
+        console.log('|| clothesData', clothesData);
         this.setState({
-            clothes: clothes
+            clothes: clothesData
         })
     }
 
     render() {
+        console.log(this.state.clothes);
         return (
-            <div>
-                { this.state.clothes.map(item => <div className='clothes-inventory'>
-                    <p>{item.clothing_id}</p>
-                    <p>{item.img_url}</p>
-                    <p>{item.name}</p>
-                    <p>{item.description}</p>
-                    <p>{item.size}</p>
-                    <p>{item.price}</p>
-                    <p>{item.category}</p>
-                </div>
+            <div className='list'>
+                { this.state.clothes.map(item => <Link to={`/clothes/${item.id}`} key={item.name}>
+                    <div className='clothes-inventory'>
+                        <p>{item.name}</p>
+                        <p>{item.description}</p>
+                        <p>{item.size}</p>
+                        <p>{item.price}</p>
+                        {/* <p>{item.category
+                            ? 'must be vintage'
+                            : 'it can be contemporary'}</p> */}
+                        <p>{item.category}</p>
+                    </div>
+                </Link>
                 )}
             </div>
 

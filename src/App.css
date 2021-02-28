@@ -37,8 +37,15 @@ label {
   width: 120px;
 }
 
-.nav-link-group {
-  
+.list {
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.clothes-inventory {
+  height: 60vh;
+  width: 100%;
+  color: black;
 }
 
 .App-link {
