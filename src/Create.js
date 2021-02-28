@@ -64,9 +64,9 @@ export default class Create extends Component {
                     </label> */}
                     <label>
                         <select value={this.state.category} type="number" onChange={this.handleCategoryChange}>
-                            <option value="1">Silk</option>
-                            <option value="2">Vintage Tops</option>
-                            <option value="3">Contemporary Tops</option>
+                            <option value={1} selected={this.state.category_id === 1}>Silk</option>
+                            <option value={2} selected={this.state.category_id === 2}>Vintage Tops</option>
+                            <option value={3} selected={this.state.category_id === 3}>Contemporary Tops</option>
                         </select>
                     </label>
                     <button>make it!</button>
