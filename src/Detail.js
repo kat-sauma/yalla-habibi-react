@@ -17,7 +17,9 @@ export default class Detail extends Component {
         const categories = await getCategories();
         const {
             category,
+            clothing_id,
             description,
+            img_url,
             name,
             price,
             size
@@ -26,7 +28,9 @@ export default class Detail extends Component {
         const category_id = getCategoryId({ category }, categories);
         this.setState({
             category: category,
+            clothing_id: clothing_id,
             description: description,
+            img_url: img_url,
             name: name,
             price: price,
             size: size,
