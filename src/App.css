@@ -1,0 +1,62 @@
+label {
+  display: block;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.nav-links-right img {
+  height: 50px;
+  width: 50px;
+}
+.nav-links-left img {
+  height: 120px;
+  width: 120px;
+}
+
+.list {
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.clothes-inventory {
+  height: 60vh;
+  width: 100%;
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
